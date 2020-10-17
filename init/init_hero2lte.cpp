@@ -30,13 +30,17 @@
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+#include <sys/sysinfo.h>
 
 #include "property_service.h"
 
 #include "init_universal8890.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
+
+
 
 void vendor_load_properties()
 {
